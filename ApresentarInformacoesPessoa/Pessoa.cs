@@ -4,25 +4,61 @@ using System.Text;
 
 namespace ApresentarInformacoesPessoa
 {
-    public  class Pessoa
+    public class Pessoa
     {
-        public string Nome { get; set; }
-        public int Idade { get; set; }
-        public double Altura { get; set; }
+        private string _nome;
+        private int _idade;
+        private double _altura;
+        private string _endereco;
 
         public Pessoa(string nome, int idade, double altura)
         {
-            Nome = nome;
-            Idade = idade;
-            Altura = altura;
+            _nome = nome;
+            _idade = idade;
+            _altura = altura;
         }
+
+
+        public Pessoa (string nome, int idade, double altura, string endereco):this(nome,idade,altura)
+        {
+            _endereco = endereco;
+        }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set {  _nome = value; }
+        }
+
+        public int Idade
+        {
+            get { return _idade; }
+            set { _idade = value; }
+        }
+
+        public double Altura
+        {
+            get { return _altura; }
+            set { _altura = value; }
+        }
+
+        public string Endereco
+        {
+            get { return _endereco; }
+            set { _endereco = value; }
+        }
+
+
+
 
         public  void Apresentar()
 
         {
-            Console.WriteLine($"O nome da pessoa é: {Nome}");
-            Console.WriteLine($"A Idade da pessoa é: {Idade}");
-            Console.WriteLine($"O Altura da pessoa é: {Altura}");
-        }
+            Console.WriteLine($"O nome da pessoa é: {_nome}");
+            Console.WriteLine($"A Idade da pessoa é: {_idade}");
+            Console.WriteLine($"O Altura da pessoa é: {_altura}");
+            Console.WriteLine($"O Altura da pessoa é: {_endereco}");
+
+        }   
     }
 }

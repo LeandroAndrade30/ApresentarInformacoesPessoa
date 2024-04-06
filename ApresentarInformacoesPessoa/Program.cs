@@ -12,7 +12,11 @@ namespace ApresentarInformacoesPessoa
             int  idade = int.Parse( Console.ReadLine());
             Console.WriteLine("Informe a altura  da pessoa");
             double altura = double.Parse(Console.ReadLine());
-            Pessoa p = new Pessoa(nome,idade,altura);
+            Console.WriteLine("Informe o endereço altura  da pessoa");
+            string endereco = Console.ReadLine();
+
+
+            Pessoa p = new Pessoa(nome,idade,altura, endereco);
             p.Apresentar();
         }
     }
